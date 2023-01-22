@@ -24,7 +24,7 @@ func RegRoute(cfg config.Config, logger *zap.Logger, db *sql.DB) *echo.Echo {
 	e.GET("/healthz", hHealthChk.Check)
 
 	e.GET("/", func(c echo.Context) error {
-		return c.String(http.StatusOK, "Hello, World!")
+		return c.String(http.StatusOK, "Hello, Hotfix!")
 	})
 
 	hAccount := account.New(cfg.FeatureFlag, db)
